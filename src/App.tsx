@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import foto from './foto.jpg';
 import './App.css';
+import TextInput from './components/TextInput';
+import Avatar from './components/Avatar/Avatar';
+import Main from './pages/Main';
 
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
+		// <div className="App">
+		// 	<header className="App-header">
+		// 		{/* <img src={foto} className="App-logo" alt="logo" /> */}
+		// 		<TextInput placeholder='Buscar o ir a...' onChange={() => ''} />
+		// 		<Avatar src={foto} />
+		// 	</header>
+		// 	<main>
+		// 	</main>
+		// </div>
+		<Main/>
 	);
 }
 
