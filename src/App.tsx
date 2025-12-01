@@ -1,27 +1,19 @@
-import React from 'react';
-import './App.css';
-import Main from './pages/Main';
-import User from './pages/User/User';
-import {
-	createBrowserRouter,
-	RouterProvider,
-} from 'react-router-dom';
+import Users from '@pages/Users';
+import { themeClass } from '@core/styling';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { AppQueryClient } from '@core/api/ReactQuery';
+import clsx from 'clsx';
 
-const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <Main />,
-	},
-	{
-		path: '/user',
-		element: <User />
-	}
-]);
+import { app } from './App.css';
 
 function App() {
-	return (
-		<RouterProvider router={router} />
-	);
+  return (
+    <QueryClientProvider client={AppQueryClient}>
+      <div className={clsx(app, themeClass)}>
+        <Users />
+      </div>
+    </QueryClientProvider>
+  );
 }
 
 export default App;

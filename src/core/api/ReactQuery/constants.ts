@@ -1,0 +1,3 @@
+export const REACT_QUERY_CACHING_TIMES = {
+  TEN_SECONDS: 10000,
+};
